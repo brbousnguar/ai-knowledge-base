@@ -5,6 +5,23 @@
 // Blue → violet (GitHub's own accent pair) carries the AI energy.
 // ─────────────────────────────────────────────────────────────
 
+// the theme caps the whole sidebar+content grid at 1200px+300px=1500px
+// and centers it, so `.center` stays ~850px wide no matter how wide the
+// window is. Theme rule lives behind `min-width: 1200px` at the *same*
+// selector specificity as a plain override here — and since this
+// stylesheet loads before the theme's, the tie goes to the theme. Bump
+// specificity (repeat the class) rather than fight load order.
+.page.page {
+  max-width: 1800px;
+}
+
+@media all and (min-width: 1200px) {
+  div#quartz-root.page.page div#quartz-body {
+    width: min(100%, 1800px);
+    max-width: min(100%, 1800px);
+  }
+}
+
 // the github theme sets its Obsidian-derived vars on `:root:root`
 // (0-2-0 specificity), so any override needs to match or beat that —
 // a plain `body` rule loses the cascade even though it loads later
