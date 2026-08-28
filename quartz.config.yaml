@@ -102,8 +102,7 @@ plugins:
   - source: "@quartz-themes/core"
     enabled: true
     options:
-      theme: vanilla-palettes
-      variation: gruvbox-medium
+      theme: github-theme
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
