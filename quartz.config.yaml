@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: "🧠 AI Knowledge Base"
+  pageTitle: "AI Knowledge Base"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -27,8 +27,8 @@ configuration:
         dark: "#2d1a08"
         secondary: "#c8620a"
         tertiary: "#7a9448"
-        highlight: rgba(200, 98, 10, 0.15)
-        textHighlight: "#f3d17188"
+        highlight: rgba(9, 105, 218, 0.15)
+        textHighlight: "rgba(56, 139, 253, 0.18)"
       darkMode:
         light: "#161618"
         lightgray: "#393639"
@@ -37,8 +37,8 @@ configuration:
         dark: "#ebebec"
         secondary: "#7b97aa"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        highlight: rgba(88, 166, 255, 0.15)
+        textHighlight: "rgba(88, 166, 255, 0.25)"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
