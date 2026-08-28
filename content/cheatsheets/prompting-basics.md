@@ -10,6 +10,15 @@ Quick-reference cheat sheet for prompting LLMs, meant to be skimmed rather than 
 
 ## Structure
 
+```mermaid
+flowchart TD
+    A["Role / context<br/>who the model is, what it already knows"]
+    B["Task<br/>the concrete thing to produce"]
+    C["Constraints<br/>format, length, tone, avoid-list"]
+    D["Examples<br/>few-shot, when shape is non-obvious"]
+    A --> B --> C --> D
+```
+
 1. **Role / context** — who the model is acting as, and what it already knows.
 2. **Task** — the concrete thing to produce, stated as an instruction, not a question.
 3. **Constraints** — format, length, tone, things to avoid.
