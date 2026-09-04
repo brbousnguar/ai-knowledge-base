@@ -13,6 +13,17 @@ Quick note triggered by a YouTube video on the "skill" design pattern for coding
 
 A **skill** packages a reusable procedure — instructions, scripts, reference docs — that an agent loads on demand instead of carrying in its base prompt at all times. This keeps the default context small while still giving the agent access to deep, specialized workflows when they're actually relevant.
 
+```mermaid
+flowchart LR
+    A[Base prompt] --> B{Task matches<br/>a skill trigger?}
+    B -->|No| C[Answer directly<br/>from base context]
+    B -->|Yes| D[Load skill:<br/>instructions + scripts + docs]
+    D --> E[Execute with<br/>full skill context]
+    E --> F[Discard skill<br/>context after use]
+```
+
+This is why context stays small at rest: the agent only pays for a skill's tokens on the branch where it's actually needed.
+
 ## Why it matters
 
 - **Progressive disclosure**: the agent only pays the context cost for a skill when the task actually triggers it.

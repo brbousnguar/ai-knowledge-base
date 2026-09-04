@@ -29,6 +29,22 @@
   // --textHighlight falls back to this var, whose theme default is a
   // yellow marker — point it at the blue wash instead
   --text-highlight-bg: rgba(56, 139, 253, 0.16);
+
+  // github-theme defines --tertiary as
+  // hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 5%)) — a
+  // calc() nested inside hsl(). getComputedStyle().getPropertyValue()
+  // returns that as a literal, unresolved string (browsers don't collapse
+  // nested calc() when reading a custom property), so any JS that reads
+  // --tertiary via getComputedStyle (the built-in mermaid renderer's
+  // themeVariables lookup, in obsidian-flavored-markdown) chokes on
+  // "calc(45% + 5%)" as a color component and throws. Flatten it to a
+  // literal hsl() here so mermaid (and anything else reading this var in
+  // JS) gets a value it can actually parse.
+  --tertiary: hsl(212, 92%, 50%);
+}
+
+:root:root:root[saved-theme="dark"] {
+  --tertiary: hsl(212, 92%, 55%);
 }
 
 // faint neural lattice behind the whole site
