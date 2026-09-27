@@ -55,5 +55,6 @@ title: AI Knowledge Base
 
 ## Recently added
 
+- [[articles/ai-agents-running-a-vending-business|What breaks when an AI agent runs a real business]]
 - [[notes/skill-design-pattern|Skill Design Pattern (agent skills)]]
 - [[cheatsheets/prompting-basics|Prompting Basics Cheat Sheet]]
